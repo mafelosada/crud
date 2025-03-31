@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">ZOO</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="tittle">ZOO</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="letter active" onclick="loadSection(this, 'Home')">Home</a></li>
+                <li><a href="#" class="letter" onclick="loadSection(this, 'RegisterAnimals')">Register Animal</a></li>
+                <li><a href="#" class="letter" onclick="loadSection(this, 'RegisterSpecies')">Register Specie</a></li>
+                <li><a href="#" class="letter" onclick="loadSection(this, 'Section')">Section</a></li>
+                <li><a href="#" class="letter" onclick="loadSection(this, 'ListAnimal')">List Animal</a></li>
+                <li><a href="#" class="letter" onclick="loadSection(this, 'keeper')">Keeper</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="content">
+        <!-- Aquí se cargará el contenido dinámicamente -->
+    </main>
+
+    <script>
+        function loadSection(element, section) {
+            fetch(section + ".html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("content").innerHTML = html;
+                    setActiveLink(element);
+                })
+                .catch(error => console.error("Error loading section:", error));
+        }
+
+        function setActiveLink(activeElement) {
+            document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
+            activeElement.classList.add("active");
+        }
+
+        // Cargar la sección Home por defecto
+        window.onload = () => {
+            const homeLink = document.querySelector("nav a");
+            loadSection(homeLink, 'Home');
+        };
+    </script>
+</body>
+</html>

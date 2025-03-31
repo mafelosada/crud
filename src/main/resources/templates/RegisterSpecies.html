@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">ZOO</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2 class="subtitulo">Register Species</h2>
+
+    <form class="species_form" th:action="@{/species/save}" method="post">
+        <div class="container_form">
+            <label for="nameSpecies">Species Name:</label>
+            <input type="text" id="nameSpecies" name="nameSpecies" required>
+
+            <label for="description">Description:</label>
+            <textarea class="textDescription" id="description" name="description" required></textarea>
+
+            <button type="submit">Register Species</button>
+        </div>
+    </form>
+    
+</body>
+</html>

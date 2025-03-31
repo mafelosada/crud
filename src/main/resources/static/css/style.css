@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef5db;
+    background: url('fondoZoo.ico') no-repeat center center fixed;
+    background-size: cover; /* Prueba con contain o auto si cover no funciona bien */
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 1px;
+    text-align: center;
+    background: rgba(207, 231, 149, 0.9);
+}
+.tittle{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px; /* Aumenta el tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    display: block; /* Asegura que funcione correctamente con text-align */
+    margin: 5px auto; /* Agrega espacio alrededor */
+}
+.letter{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.subtitulo{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #f4f4a8;
+}
+nav ul li {
+    margin: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: #2e7d32;
+}
+
+nav ul li a.active {
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+.active {
+    font-weight: bold;
+    color: green;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+.search-container input {
+    padding: 10px;
+    width: 350px;
+    border-radius: 20px;
+    border: 2px solid green;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.species-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.species-card {
+    background: rgba(255, 255, 255, 0.507);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 290px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+/*Formulario de registro animal*/
+
+.animalsRegisterForm {
+    background: rgba(255, 255, 255, 0.507);
+    padding: 20px;
+    width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+.animalsRegisterForm label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+.animalsRegisterForm input, .animalsRegisterForm select {
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.animalsRegisterForm input[type="file"] {
+    border: none;
+}
+.animalsRegisterForm button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.animalsRegisterForm button:hover {
+    background: #1b5e20;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+.container_form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+
+
+/*Formulario de registro de species*/
+
+.species_form{
+    background: rgba(255, 255, 255, 0.507);
+    padding: 20px;
+    width: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+.species_form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+.species_form input, .species_form select {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.species_form input[type="file"] {
+    border: none;
+}
+.species_form button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.species_form button:hover {
+    background: #1b5e20;
+}
+
+.textDescription{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 180px;
+    border-radius: 20px;
+    border: solid 2px #2e7d32;
+}

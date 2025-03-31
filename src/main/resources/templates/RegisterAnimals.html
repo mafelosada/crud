@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Register Species</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2 class="subtitulo">Register a New Animal</h2>
+    <form th:action="@{/animals/save}" method="post" enctype="multipart/form-data" class="animalsRegisterForm">
+        <div class="container_form">
+            <label for="nameAnimal">Animal Name:</label>
+            <input type="text" id="nameAnimal" name="nameAnimal" required>
+    
+            <label for="dateBirth">Date of Birth:</label>
+            <input type="date" id="dateBirth" name="dateBirth" required>
+        </div>
+        <div class="container_form">
+            <label for="foto">Upload Photo:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+        </div>
+        <div class="container_form">
+            <label for="speciesID">Species:</label>
+            <select id="speciesID" name="speciesID" required>
+                <option value="">Select a species</option>
+                <option th:each="species : ${speciesList}" th:value="${species.id}" th:text="${species.name}"></option>
+            </select>
+    
+            <label for="sectionID">Section:</label>
+            <select id="sectionID" name="sectionID" required>
+                <option value="">Select a section</option>
+                <option th:each="section : ${sectionsList}" th:value="${section.id}" th:text="${section.name}"></option>
+            </select>
+    
+            <label for="statusID">Status:</label>
+            <select id="statusID" name="statusID" required>
+                <option value="">Select a status</option>
+                <option th:each="status : ${statusList}" th:value="${status.id}" th:text="${status.name}"></option>
+            </select>
+        </div>
+        <div class="container_form">
+            <button type="submit">Register Animal</button>
+        </div>
+
+    </form>
+</body>
+</html>
