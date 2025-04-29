@@ -1,15 +1,32 @@
 package com.zoo.crud.DTO;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class KeeperDTO {
 
+     @JsonProperty("id")
+    private int keeperID;
     private String nameKeeper;
     private String phone;
     private String specialty;
 
-    public KeeperDTO(String nameKeeper, String phone, String specialty) {
+    public KeeperDTO() {
+        // Constructor vacío necesario para Jackson
+    }
+
+    public KeeperDTO(int keeperID, String nameKeeper, String phone, String specialty) {
+        this.keeperID = keeperID;
         this.nameKeeper = nameKeeper;
         this.phone = phone;
         this.specialty = specialty;
+    }
+
+    public int getKeeperID() {
+        return keeperID;
+    }
+
+    public void setKeeperID(int keeperID) {
+        this.keeperID = keeperID;
     }
 
     public String getNameKeeper() {

@@ -1,42 +1,51 @@
 package com.zoo.crud.DTO;
 
-import com.zoo.crud.model.animal;
-import com.zoo.crud.model.feeding;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.zoo.crud.model.Animals;
+import com.zoo.crud.model.Feedings;
 
 public class FeedingAnimalDTO {
 
-    private animal animal;
-    private feeding feeding;
+    @JsonProperty("id")
+    private int feedingAnimalID;
+    private Animals animal;
+    private Feedings feeding;
     private String schedule;
 
-    public FeedingAnimalDTO(animal animal, feeding feeding, String schedule) {
+    public FeedingAnimalDTO() {
+    }
+    public FeedingAnimalDTO(int feedingAnimalID, Animals animal, Feedings feeding, String schedule) {
+        this.feedingAnimalID = feedingAnimalID;
         this.animal = animal;
         this.feeding = feeding;
         this.schedule = schedule;
     }
 
-    public animal getAnimal() {
-        return animal;
+    public int getFeedingAnimalID(){
+        return feedingAnimalID;
+    }
+    public void setFeedingAnimalID(int feedingAnimalID){
+        this.feedingAnimalID = feedingAnimalID;
     }
 
-    public void setAnimal(animal animal) {
+    public Animals getAnimal() {
+        return animal;
+    }
+    public void setAnimal(Animals animal) {
         this.animal = animal;
     }
 
-    public feeding getFeeding() {
+    public Feedings getFeeding() {
         return feeding;
     }
-
-    public void setFeeding(feeding feeding) {
+    public void setFeeding(Feedings feeding) {
         this.feeding = feeding;
     }
 
     public String getSchedule() {
         return schedule;
     }
-
     public void setSchedule(String schedule) {
         this.schedule = schedule;
     }
-
 }

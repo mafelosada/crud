@@ -1,0 +1,665 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef5db;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 1px;
+    text-align: center;
+    background: #2c5545c8 ;
+}
+.tittle{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px; 
+    text-align: center; 
+    display: block; 
+    margin: 5px auto; 
+    color: #ffffff;
+}
+.letter{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.subtitulo{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #1b5e20;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #c5fec660;
+}
+nav ul li {
+    margin: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: #2e7d32;
+}
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+.search-container input {
+    padding: 10px;
+    width: 350px;
+    border-radius: 20px;
+    border: 2px solid green;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.species-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.species-card {
+    background:  rgba(255, 255, 255, 0.866);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 290px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .tittle {
+        font-size: 50px;
+    }
+
+    .letter {
+        font-size: 16px;
+    }
+
+    .subtitulo {
+        font-size: 22px;
+    }
+
+    .search-container input {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .species-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tittle {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .search-container input {
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+
+/*Style Register Animal*/
+.animalsRegisterForm {
+    background: rgba(255, 255, 255, 0.507);
+    padding: 20px;
+    width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    margin-top: 20px;
+    border: 2px solid #1b5e20;
+}
+.animalsRegisterForm label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+.animalsRegisterForm input, .animalsRegisterForm select {
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.animalsRegisterForm input[type="file"] {
+    border: none;
+}
+.animalsRegisterForm button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.animalsRegisterForm button:hover {
+    background: #1b5e20;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+.container_form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .animalsRegisterForm {
+        width: 95%;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .animalsRegisterForm input,
+    .animalsRegisterForm select {
+        width: 100%;
+    }
+
+    .animalsRegisterForm button {
+        width: 100%;
+    }
+
+    .container_form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animalsRegisterForm {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .animalsRegisterForm label {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+/*Estilos container*/
+.container {
+    display: none; /* Oculta todos los contenedores */
+}
+.container.active {
+    display: block; /* Muestra solo el contenedor activo */
+}
+.id_espacio{
+    width: 10px;
+} 
+
+@media (max-width: 768px) {
+    .id_espacio {
+        width: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .id_espacio {
+        width: 2px;
+    }
+}
+
+
+
+/*Style Register Species*/
+.species_form{
+    background: rgba(255, 255, 255, 0.507);
+    padding: 20px;
+    width: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    border: 2px solid #1b5e20;
+}
+.species_form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+.species_form input, .species_form select {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.species_form input[type="file"] {
+    border: none;
+}
+.species_form button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.species_form button:hover {
+    background: #1b5e20;
+}
+.textDescription{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 180px;
+    border-radius: 20px;
+    border: solid 2px #2e7d32;
+}
+
+@media (max-width: 768px) {
+    .species_form {
+        width: 90%;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .species_form input,
+    .species_form select {
+        width: 100%;
+    }
+
+    .species_form button {
+        width: 100%;
+    }
+
+    .textDescription {
+        font-size: 18px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .species_form {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .species_form label {
+        font-size: 16px;
+    }
+
+    .textDescription {
+        font-size: 16px;
+    }
+}
+
+
+
+/*Style Register keeper*/
+.keeper_form{
+    background: rgba(255, 255, 255, 0.507);
+    padding: 20px;
+    width: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    border: 2px solid #1b5e20;
+}
+.keeper_form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+.keeper_form input {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.keeper_form button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .keeper_form {
+        width: 90%;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .keeper_form input {
+        width: 100%;
+    }
+
+    .keeper_form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .keeper_form {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .keeper_form label {
+        font-size: 16px;
+    }
+}
+
+
+
+/*Style Register Feeding Animal*/
+.feeding_form{
+    background: rgba(255, 255, 255, 0.507);
+    padding: 20px;
+    width: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    border: 2px solid #1b5e20;
+}
+.feeding_form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+.feeding_form input {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.feeding_form button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.feeding_form input, .feeding_form select {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/*Style list Animal*/
+.letter_list{
+    color: #1b5e20;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+.photo{
+    width: 100px;
+    height: 65px;
+}
+.animal-card-list{
+    background: rgb(255, 255, 255);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    width: 330px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.animal-card{
+    background: rgba(255, 255, 255, 0.866);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    width: 330px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten si hay muchas */
+}
+
+
+/*Style list Keeper*/
+.keeper-card-list{
+    background: rgb(255, 255, 255);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    width: 330px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.keeper-card{
+    background: rgba(255, 255, 255, 0.866);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    width: 330px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+
+/*Style List Feeding*/
+.feeding_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.feeding-card {
+    background:  rgba(255, 255, 255, 0.866);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 290px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Style List Register*/
+.register-card-list{
+    background:  rgba(255, 255, 255, 0.866);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 290px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.medication-card-list {
+    background:  rgba(255, 255, 255, 0.866);
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 290px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Style de New Register Animal*/
+.button_new_register button {
+    width: 250px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.textDescriptionMedicine{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 20px;
+    border: solid 2px #2e7d32;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .register-card-list,
+    .medication-card-list,
+    .feeding-card,
+    .keeper-card,
+    .keeper-card-list,
+    .animal-card,
+    .animal-card-list,
+    .section-card {
+        width: 95% !important;
+        font-size: 15px !important;
+    }
+
+    .textDescriptionMedicine {
+        font-size: 18px !important;
+        height: auto !important;
+        padding: 10px !important;
+    }
+
+    .button_new_register button {
+        width: 95% !important;
+        font-size: 16px !important;
+        padding: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-card-list,
+    .medication-card-list,
+    .feeding-card,
+    .keeper-card,
+    .keeper-card-list,
+    .animal-card,
+    .animal-card-list,
+    .section-card {
+        width: 100% !important;
+        font-size: 14px !important;
+    }
+
+    .textDescriptionMedicine {
+        font-size: 16px !important;
+        height: auto !important;
+        padding: 8px !important;
+    }
+
+    .button_new_register button {
+        width: 100% !important;
+        font-size: 15px !important;
+        padding: 8px !important;
+    }
+}
+

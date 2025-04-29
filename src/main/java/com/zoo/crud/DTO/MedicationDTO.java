@@ -1,16 +1,23 @@
 package com.zoo.crud.DTO;
 
-import com.zoo.crud.model.registerAnimal;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.zoo.crud.model.RegisterAnimals;
 
 public class MedicationDTO {
 
-    private registerAnimal registerAnimal;
+    @JsonProperty("id")
+    private int medicationID;
+    private RegisterAnimals registerAnimal;
     private String description;
     private String medicine;
     private String dose;
     private String duration;
 
-    public MedicationDTO(registerAnimal registerAnimal, String description, String medicine, String dose, String duration) {
+    public MedicationDTO() {
+    }
+
+    public MedicationDTO( int medicationID, RegisterAnimals registerAnimal, String description, String medicine, String dose, String duration) {
+        this.medicationID = medicationID;
         this.registerAnimal = registerAnimal;
         this.description = description;
         this.medicine = medicine;
@@ -18,11 +25,19 @@ public class MedicationDTO {
         this.duration = duration;
     }
 
-    public registerAnimal getRegisterAnimal() {
+    public int getMedicationID() {
+        return medicationID;
+    }
+
+    public void setMedicationID(int medicationID) {
+        this.medicationID = medicationID;
+    }
+
+    public RegisterAnimals getRegisterAnimal() {
         return registerAnimal;
     }
 
-    public void setRegisterAnimal(registerAnimal registerAnimal) {
+    public void setRegisterAnimal(RegisterAnimals registerAnimal) {
         this.registerAnimal = registerAnimal;
     }
 

@@ -2,36 +2,51 @@ package com.zoo.crud.DTO;
 
 import java.util.Date;
 
-import com.zoo.crud.model.animal;
-import com.zoo.crud.model.keeper;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.zoo.crud.model.Animals;
+import com.zoo.crud.model.Keepers;
 
 public class RegisterAnimalDTO {
 
-     private animal animal;
-    private keeper keeper;
+    @JsonProperty("id")
+    private int registerAnimalID;
+     private Animals animal;
+    private Keepers keeper;
     private Date date;
     private String diagnostic;
 
-    public RegisterAnimalDTO(animal animal, keeper keeper, Date date, String diagnostic) {
+    public RegisterAnimalDTO() {
+    }
+
+    public RegisterAnimalDTO(int registerAnimalID, Animals animal, Keepers keeper, Date date, String diagnostic) {
+        this.registerAnimalID = registerAnimalID;
         this.animal = animal;
         this.keeper = keeper;
         this.date = date;
         this.diagnostic = diagnostic;
     }
 
-    public animal getAnimal() {
+    public int getRegisterAnimalID() {
+        return registerAnimalID;
+    }
+
+    public void setRegisterAnimalID(int registerAnimalID) {
+        this.registerAnimalID = registerAnimalID;
+    }
+
+    public Animals getAnimal() {
         return animal;
     }
 
-    public void setAnimal(animal animal) {
+    public void setAnimal(Animals animal) {
         this.animal = animal;
     }
 
-    public keeper getKeeper() {
+    public Keepers getKeeper() {
         return keeper;
     }
 
-    public void setKeeper(keeper keeper) {
+    public void setKeeper(Keepers keeper) {
         this.keeper = keeper;
     }
 

@@ -1,15 +1,28 @@
 package com.zoo.crud.DTO;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SectionDTO {
+    @JsonProperty("id")
+    private int sectionID;
     private String nameSection;
     private String location;
 
     public SectionDTO() {
     }
 
-    public SectionDTO(String nameSection, String location) {
+    public SectionDTO(int sectionID, String nameSection, String location) {
+        this.sectionID = sectionID;
         this.nameSection = nameSection;
         this.location = location;
+    }
+
+    public int getSectionID() {
+        return sectionID;
+    }
+
+    public void setSectionID(int sectionID) {
+        this.sectionID = sectionID;
     }
 
     public String getNameSection() {
